@@ -3,8 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Projekt naukowy</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   </head>
   <body>
-
+    <div class="container">
+      <div class="row row-cols-6" id="mainDiv">
+        <!-- <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div> -->
+      </div>
+    </div>
+    <script>
+      function generujaceDivy(){
+        let mainDiv = document.getElementById("mainDiv");
+        for (let i= 0; i<6; i++) {
+          let div= document.createElement("div");
+          mainDiv.appendChild(div);
+          div.setAttribute("class", "col");
+          div.innerText="To jest div numer " + i;
+        }
+      }
+      generujaceDivy();
+    </script>
   </body>
 </html>
